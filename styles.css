@@ -1,8 +1,8 @@
 :root {
     --blue-color: rgb(24, 39, 71);
     --brown-color: rgb(86, 43, 8);
-    --green-color: rgb(100, 126, 104);
-    --grey-color: rgb(216, 216, 216);
+    --green-color: rgb(6, 78, 59);
+    --grey-color: rgb(236, 253, 245);
 }
 
 * {
@@ -22,10 +22,10 @@
     background-color: var(--grey-color);
 }
 
-div {
-    background-color: rgb(214, 144, 144);
+
+/* div {
     border: 1px solid blue;
-}
+} */
 
 .header {
     grid-column: 2 / 4;
@@ -33,6 +33,7 @@ div {
     display: grid;
     align-items: center;
     padding-left: 20px;
+    border-bottom: 1px solid lightgrey;
 }
 
 .sidebar {
@@ -46,7 +47,8 @@ div {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: rgb(100, 126, 104, 0.9)
+    background-color: rgb(6, 78, 59, 0.96);
+    color: white;
 }
 
 .sidebar-card:hover {
@@ -54,8 +56,18 @@ div {
     cursor: pointer;
 }
 
+.sidebar-card>img {
+    height: 40px;
+    width: 40px;
+}
+
 #logo {
     height: 100px;
+}
+
+#logo>img {
+    height: 100px;
+    width: 100%;
 }
 
 .courses {
@@ -69,6 +81,7 @@ div {
     grid-template-columns: repeat(auto-fit, minmax(200px, 2fr));
     gap: 50px;
     padding: 30px 0;
+    border-top: 1px solid lightgray;
 }
 
 .course-card {
@@ -84,12 +97,52 @@ div {
 }
 
 .color {
-    background-color: var(--blue-color);
+    background-color: var(--green-color);
 }
 
 .color:hover,
-.name:hover {
+.name:hover,
+.links>img:hover {
     cursor: pointer;
+}
+
+.name {
+    padding: 10px 0 0 10px;
+    color: var(--green-color);
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.name>a,
+.name>a::after {
+    text-decoration: none;
+    color: var(--green-color);
+}
+
+.name>a:hover {
+    text-decoration: underline;
+}
+
+.name>p {
+    font-size: 0.75rem;
+}
+
+.links {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    align-items: center;
+    gap: 10px;
+    padding: 0 10px;
+}
+
+.links>img {
+    height: 20px;
+    width: 20px;
+}
+
+.links>img:hover {
+    background-color: rgb(225, 250, 239);
 }
 
 .todo {
@@ -103,4 +156,6 @@ div {
     grid-row: 3 / 4;
     display: grid;
     align-items: center;
+    justify-content: center;
+    border-top: 1px solid lightgrey;
 }
