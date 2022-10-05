@@ -2,7 +2,7 @@
     --blue-color: rgb(24, 39, 71);
     --brown-color: rgb(86, 43, 8);
     --green-color: rgb(6, 78, 59);
-    --grey-color: rgb(236, 253, 245);
+    --grey-color: rgb(242, 255, 249);
 }
 
 * {
@@ -148,7 +148,53 @@
 .todo {
     grid-column: 3 / 4;
     grid-row: 2 / 3;
-    padding: 30px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.todo-item {
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    gap: 7px;
+    text-decoration: none;
+    color: rgb(6, 78, 59);
+    flex-grow: 1;
+    flex-shrink: 0;
+}
+
+.todo-item:hover {
+    text-decoration: underline;
+}
+
+.todo>h4 {
+    font-size: 1.2rem;
+}
+
+.todo-list-container>ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.item-info {
+    width: 180px;
+    flex-grow: 1;
+}
+
+.item-info>b {
+    font-size: 1rem;
+}
+
+.item-info>p {
+    font-size: 0.85rem;
+}
+
+.item-remove {
+    /* margin-left: 20px; */
 }
 
 .footer {
