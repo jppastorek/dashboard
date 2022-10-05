@@ -193,10 +193,6 @@
     font-size: 0.85rem;
 }
 
-.item-remove {
-    /* margin-left: 20px; */
-}
-
 .footer {
     grid-column: 1 / 4;
     grid-row: 3 / 4;
